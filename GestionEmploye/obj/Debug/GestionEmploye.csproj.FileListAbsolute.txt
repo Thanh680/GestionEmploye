@@ -1,0 +1,14 @@
+D:\GestionEmploye\GestionEmploye\GestionEmploye\bin\Debug\GestionEmploye.exe.config
+D:\GestionEmploye\GestionEmploye\GestionEmploye\bin\Debug\GestionEmploye.exe
+D:\GestionEmploye\GestionEmploye\GestionEmploye\bin\Debug\GestionEmploye.pdb
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.AssemblyReference.cache
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.SuggestedBindingRedirects.cache
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Properties.Resources.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.GenerateResource.cache
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.CoreCompileInputs.cache
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.exe
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.pdb
+D:\GestionEmploye\GestionEmploye\GestionEmploye\bin\Debug\FontAwesome.Sharp.dll
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.CopyComplete
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.FormMain.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.FormProjet.resources
