@@ -163,6 +163,8 @@
             this.competenceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.competenceDataGridView.Location = new System.Drawing.Point(0, 111);
             this.competenceDataGridView.Name = "competenceDataGridView";
+            this.competenceDataGridView.ReadOnly = true;
+            this.competenceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.competenceDataGridView.Size = new System.Drawing.Size(872, 435);
             this.competenceDataGridView.TabIndex = 1;
             // 

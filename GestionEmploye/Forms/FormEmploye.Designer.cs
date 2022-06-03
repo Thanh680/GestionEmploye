@@ -257,6 +257,7 @@
             this.employeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.employeDataGridView.Size = new System.Drawing.Size(915, 441);
             this.employeDataGridView.TabIndex = 0;
+            this.employeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeDataGridView_CellClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

@@ -62,5 +62,25 @@ namespace GestionEmploye
         {
 
         }
+
+        private void employeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            listBoxCompetence.Items.Clear();
+            SqlDataReader dr;
+            string query = "SELECT libelle " +
+                "FROM Competence " +
+                "JOIN EmployeCompetence ON Competence.id = EmployeCompetence.idCompetence " +
+                "WHERE idEmploye = '" + employeDataGridView.SelectedRows[0].Cells[0].Value + "'";
+            SqlCommand cmd = new SqlCommand(query, Connexion.getInstance());
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                listBoxCompetence.Items.Add(dr["libelle"].ToString());
+            }
+            cmd = null;
+            dr.Close();
+            dr = null;
+        }
     }
 }
+

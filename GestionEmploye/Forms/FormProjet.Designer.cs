@@ -44,11 +44,15 @@
             this.gestionEmployeDataSet = new GestionEmploye.GestionEmployeDataSet();
             this.projetTableAdapter = new GestionEmploye.GestionEmployeDataSetTableAdapters.ProjetTableAdapter();
             this.tableAdapterManager = new GestionEmploye.GestionEmployeDataSetTableAdapters.TableAdapterManager();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.listBoxCompetence = new System.Windows.Forms.ListBox();
+            this.listBoxEmploye = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.projetDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEmployeDataSet)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNewProjet
@@ -160,6 +164,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.projetDataGridView);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 100);
@@ -184,30 +189,35 @@
             this.projetDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.projetDataGridView.Size = new System.Drawing.Size(948, 514);
             this.projetDataGridView.TabIndex = 0;
+            this.projetDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projetDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
             this.dataGridViewTextBoxColumn1.HeaderText = "id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "libelle";
             this.dataGridViewTextBoxColumn2.HeaderText = "libelle";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "dateDebut";
             this.dataGridViewTextBoxColumn3.HeaderText = "dateDebut";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "dateFin";
             this.dataGridViewTextBoxColumn4.HeaderText = "dateFin";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // projetBindingSource
             // 
@@ -233,6 +243,34 @@
             this.tableAdapterManager.ProjetTableAdapter = this.projetTableAdapter;
             this.tableAdapterManager.UpdateOrder = GestionEmploye.GestionEmployeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.listBoxEmploye);
+            this.panel3.Controls.Add(this.listBoxCompetence);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(649, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(299, 514);
+            this.panel3.TabIndex = 1;
+            // 
+            // listBoxCompetence
+            // 
+            this.listBoxCompetence.Dock = System.Windows.Forms.DockStyle.Top;
+            this.listBoxCompetence.FormattingEnabled = true;
+            this.listBoxCompetence.Location = new System.Drawing.Point(0, 0);
+            this.listBoxCompetence.Name = "listBoxCompetence";
+            this.listBoxCompetence.Size = new System.Drawing.Size(299, 160);
+            this.listBoxCompetence.TabIndex = 0;
+            // 
+            // listBoxEmploye
+            // 
+            this.listBoxEmploye.Dock = System.Windows.Forms.DockStyle.Top;
+            this.listBoxEmploye.FormattingEnabled = true;
+            this.listBoxEmploye.Location = new System.Drawing.Point(0, 160);
+            this.listBoxEmploye.Name = "listBoxEmploye";
+            this.listBoxEmploye.Size = new System.Drawing.Size(299, 173);
+            this.listBoxEmploye.TabIndex = 1;
+            // 
             // FormProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,6 +287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.projetDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEmployeDataSet)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -270,5 +309,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private FontAwesome.Sharp.IconButton btnRefreshProjet;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ListBox listBoxEmploye;
+        private System.Windows.Forms.ListBox listBoxCompetence;
     }
 }

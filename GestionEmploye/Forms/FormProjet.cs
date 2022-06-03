@@ -34,8 +34,12 @@ namespace GestionEmploye
         private void btnDeleteProjet_Click(object sender, EventArgs e)
         {
 
-            string req = "DELETE FROM Projet " +
-                         "WHERE id = " + projetDataGridView.SelectedRows[0].Cells[0].Value;
+            string req = "UPDATE Employe SET idProjet = NULL " +
+                "WHERE idProjet = " + projetDataGridView.SelectedRows[0].Cells[0].Value; 
+            req += "DELETE FROM ProjetCompetence " +
+                         "WHERE idProjet = " + projetDataGridView.SelectedRows[0].Cells[0].Value;
+            req += "DELETE FROM Projet " +
+                   "WHERE id = " + projetDataGridView.SelectedRows[0].Cells[0].Value;
             SqlCommand com = new SqlCommand(req, Connexion.getInstance());
             try
             {
@@ -62,6 +66,46 @@ namespace GestionEmploye
         {
             FormEditProjet fep = new FormEditProjet();
             fep.ShowDialog();
+        }
+
+        private void projetDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // LISTE COMPETENCE
+            listBoxCompetence.Items.Clear();
+            SqlDataReader dr1;
+            string query1 = "SELECT libelle " +
+                "FROM Competence " +
+                "JOIN ProjetCompetence ON Competence.id = ProjetCompetence.idCompetence " +
+                "WHERE idProjet = '" + projetDataGridView.SelectedRows[0].Cells[0].Value + "'";
+            SqlCommand cmd = new SqlCommand(query1, Connexion.getInstance());
+            dr1 = cmd.ExecuteReader();
+            while (dr1.Read())
+            {
+                listBoxCompetence.Items.Add(dr1["libelle"].ToString());
+            }
+            cmd = null;
+            dr1.Close();
+            dr1 = null;
+            // FIN LISTE COMPETENCE
+
+            // LISTE EMPLOYE
+            listBoxEmploye.Items.Clear();
+            SqlDataReader dr2;
+            string query = "SELECT nom, prenom " +
+                "FROM Projet " +
+                "JOIN Employe ON Projet.id = Employe.idProjet " +
+                "WHERE idProjet = '" + projetDataGridView.SelectedRows[0].Cells[0].Value + "'";
+            SqlCommand cmd2 = new SqlCommand(query, Connexion.getInstance());
+            dr2 = cmd2.ExecuteReader();
+            while (dr2.Read())
+            {
+                listBoxEmploye.Items.Add(dr2["nom"].ToString() + " " + dr2["prenom"].ToString());
+            }
+            cmd = null;
+            dr2.Close();
+            dr2 = null;
+            // FIN LISTE EMPLOYE
+
         }
     }
 }
