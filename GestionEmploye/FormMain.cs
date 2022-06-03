@@ -196,5 +196,15 @@ namespace GestionEmploye
         {
             OpenChildForm(new FormProjet());
         }
+
+        private void btnEmploye_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormEmploye());
+        }
+
+        private void btnCompetence_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormCompetence());
+        }
     }
 }

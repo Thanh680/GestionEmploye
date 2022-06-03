@@ -53,11 +53,48 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connexion.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCompetence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCompetence.Designer.cs">
+      <DependentUpon>FormCompetence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditProjet.Designer.cs">
+      <DependentUpon>FormEditProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEmploye.Designer.cs">
+      <DependentUpon>FormEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormNewCompetence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNewCompetence.Designer.cs">
+      <DependentUpon>FormNewCompetence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormNewEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNewEmploye.Designer.cs">
+      <DependentUpon>FormNewEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormNewProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNewProjet.Designer.cs">
+      <DependentUpon>FormNewProjet.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormProjet.cs">
       <SubType>Form</SubType>
@@ -65,10 +102,36 @@
     <Compile Include="Forms\FormProjet.Designer.cs">
       <DependentUpon>FormProjet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionEmployeDataSet.cs">
+      <DependentUpon>GestionEmployeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GestionEmployeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GestionEmployeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCompetence.resx">
+      <DependentUpon>FormCompetence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditProjet.resx">
+      <DependentUpon>FormEditProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEmploye.resx">
+      <DependentUpon>FormEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNewCompetence.resx">
+      <DependentUpon>FormNewCompetence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNewEmploye.resx">
+      <DependentUpon>FormNewEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNewProjet.resx">
+      <DependentUpon>FormNewProjet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormProjet.resx">
       <DependentUpon>FormProjet.cs</DependentUpon>
@@ -82,6 +145,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="GestionEmployeDataSet.xsc">
+      <DependentUpon>GestionEmployeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GestionEmployeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GestionEmployeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GestionEmployeDataSet.xss">
+      <DependentUpon>GestionEmployeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

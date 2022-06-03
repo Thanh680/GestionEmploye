@@ -12,3 +12,9 @@ D:\GestionEmploye\GestionEmploye\GestionEmploye\bin\Debug\FontAwesome.Sharp.dll
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.CopyComplete
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.FormMain.resources
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.FormProjet.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.FormEmploye.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Forms.FormNewProjet.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Forms.FormNewEmploye.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Forms.FormEditProjet.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.FormCompetence.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Forms.FormNewCompetence.resources

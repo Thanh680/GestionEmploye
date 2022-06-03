@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnCompetence = new FontAwesome.Sharp.IconButton();
+            this.btnEmploye = new FontAwesome.Sharp.IconButton();
             this.btnProjet = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
@@ -46,9 +45,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.iconButton3);
-            this.panel1.Controls.Add(this.iconButton2);
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.btnCompetence);
+            this.panel1.Controls.Add(this.btnEmploye);
             this.panel1.Controls.Add(this.btnProjet);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -57,71 +55,51 @@
             this.panel1.Size = new System.Drawing.Size(236, 658);
             this.panel1.TabIndex = 0;
             // 
-            // iconButton3
+            // btnCompetence
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(0)))));
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Mountain;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 275);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(236, 54);
-            this.iconButton3.TabIndex = 8;
-            this.iconButton3.Text = "Projet";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.btnCompetence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(0)))));
+            this.btnCompetence.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompetence.FlatAppearance.BorderSize = 0;
+            this.btnCompetence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompetence.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompetence.ForeColor = System.Drawing.Color.White;
+            this.btnCompetence.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnCompetence.IconColor = System.Drawing.Color.White;
+            this.btnCompetence.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCompetence.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompetence.Location = new System.Drawing.Point(0, 218);
+            this.btnCompetence.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnCompetence.Name = "btnCompetence";
+            this.btnCompetence.Size = new System.Drawing.Size(236, 54);
+            this.btnCompetence.TabIndex = 7;
+            this.btnCompetence.Text = "Competence";
+            this.btnCompetence.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompetence.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCompetence.UseVisualStyleBackColor = false;
+            this.btnCompetence.Click += new System.EventHandler(this.btnCompetence_Click);
             // 
-            // iconButton2
+            // btnEmploye
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(0)))));
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Mountain;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 221);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(236, 54);
-            this.iconButton2.TabIndex = 7;
-            this.iconButton2.Text = "Projet";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(0)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Mountain;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 167);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(236, 54);
-            this.iconButton1.TabIndex = 6;
-            this.iconButton1.Text = "Projet";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnEmploye.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(0)))));
+            this.btnEmploye.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmploye.FlatAppearance.BorderSize = 0;
+            this.btnEmploye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmploye.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmploye.ForeColor = System.Drawing.Color.White;
+            this.btnEmploye.IconChar = FontAwesome.Sharp.IconChar.HardHat;
+            this.btnEmploye.IconColor = System.Drawing.Color.White;
+            this.btnEmploye.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmploye.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmploye.Location = new System.Drawing.Point(0, 164);
+            this.btnEmploye.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnEmploye.Name = "btnEmploye";
+            this.btnEmploye.Size = new System.Drawing.Size(236, 54);
+            this.btnEmploye.TabIndex = 6;
+            this.btnEmploye.Text = "Employe";
+            this.btnEmploye.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmploye.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmploye.UseVisualStyleBackColor = false;
+            this.btnEmploye.Click += new System.EventHandler(this.btnEmploye_Click);
             // 
             // btnProjet
             // 
@@ -135,7 +113,7 @@
             this.btnProjet.IconColor = System.Drawing.Color.White;
             this.btnProjet.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProjet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProjet.Location = new System.Drawing.Point(0, 113);
+            this.btnProjet.Location = new System.Drawing.Point(0, 110);
             this.btnProjet.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnProjet.Name = "btnProjet";
             this.btnProjet.Size = new System.Drawing.Size(236, 54);
@@ -151,7 +129,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(236, 113);
+            this.panel4.Size = new System.Drawing.Size(236, 110);
             this.panel4.TabIndex = 4;
             // 
             // panelDesktop
@@ -255,9 +233,8 @@
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnCompetence;
+        private FontAwesome.Sharp.IconButton btnEmploye;
         private FontAwesome.Sharp.IconButton btnProjet;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMaximize;
