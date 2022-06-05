@@ -101,6 +101,7 @@
             this.checkedListBoxCompetence.Size = new System.Drawing.Size(269, 124);
             this.checkedListBoxCompetence.TabIndex = 9;
             this.checkedListBoxCompetence.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxCompetence_ItemCheck);
+            this.checkedListBoxCompetence.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxCompetence_SelectedIndexChanged);
             // 
             // listBoxIDC
             // 

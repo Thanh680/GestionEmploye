@@ -42,7 +42,6 @@ namespace GestionEmploye.Forms
             foreach (string s in checkedListBoxEmploye.CheckedItems)
             {
                 string[] tokens = s.Split(' ');
-                MessageBox.Show(tokens[0]);
                 string query2 = "select id from Employe where nom = '" + tokens[0] + "'";
                 
                 SqlCommand cmd2 = new SqlCommand(query2, Connexion.getInstance());
@@ -134,6 +133,46 @@ namespace GestionEmploye.Forms
                 "JOIN EmployeCompetence ON Employe.id = EmployeCompetence.idEmploye " +
                 "JOIN Competence ON Competence.id = EmployeCompetence.idCompetence " +
                 "where Competence.libelle in (" + chkBox + ")";
+            SqlCommand cmd = new SqlCommand(query, Connexion.getInstance());
+            SqlDataAdapter sda;
+            DataTable dt = new DataTable();
+            sda = new SqlDataAdapter(cmd);
+            try
+            {
+                sda.Fill(dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string s = dt.Rows[i]["nom"].ToString() + " " + dt.Rows[i]["prenom"].ToString();
+                    checkedListBoxEmploye.Items.Add(s);
+                }
+                cmd = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void checkedListBoxCompetence_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checkedListBoxEmploye.Items.Clear();
+            string chkBox = "";
+            foreach (object itemChecked in checkedListBoxCompetence.CheckedItems)
+            {
+                if (chkBox == "")
+                {
+                    chkBox = "'" + itemChecked.ToString() + "'";
+                }
+                else
+                {
+                    chkBox += "," + "'" + itemChecked.ToString() + "'";
+                }
+            }
+            string query = "select DISTINCT nom, prenom " +
+                "from Employe " +
+                "JOIN EmployeCompetence ON Employe.id = EmployeCompetence.idEmploye " +
+                "JOIN Competence ON Competence.id = EmployeCompetence.idCompetence " +
+                "where Competence.libelle in (" + chkBox + ") AND Employe.idProjet IS null";
             SqlCommand cmd = new SqlCommand(query, Connexion.getInstance());
             SqlDataAdapter sda;
             DataTable dt = new DataTable();

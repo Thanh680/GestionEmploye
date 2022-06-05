@@ -112,12 +112,13 @@
             this.listBoxID.Name = "listBoxID";
             this.listBoxID.Size = new System.Drawing.Size(120, 95);
             this.listBoxID.TabIndex = 8;
+            this.listBoxID.Visible = false;
             // 
             // FormNewEmploye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 445);
+            this.ClientSize = new System.Drawing.Size(520, 422);
             this.Controls.Add(this.listBoxID);
             this.Controls.Add(this.checkedListBoxCompetence);
             this.Controls.Add(this.btnValider);

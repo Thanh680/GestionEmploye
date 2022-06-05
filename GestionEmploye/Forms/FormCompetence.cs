@@ -64,5 +64,31 @@ namespace GestionEmploye
             dr = null;
             // FIN LISTE EMPLOYE
         }
+
+        private void btnDeleteCompetence_Click(object sender, EventArgs e)
+        {
+            string req = "DELETE FROM EmployeCompetence " +
+                "WHERE idCompetence = " + competenceDataGridView.SelectedRows[0].Cells[0].Value;
+            req += "DELETE FROM ProjetCompetence " +
+                         "WHERE idCompetence = " + competenceDataGridView.SelectedRows[0].Cells[0].Value;
+            req += "DELETE FROM Competence " +
+                         "WHERE id = " + competenceDataGridView.SelectedRows[0].Cells[0].Value;
+            MessageBox.Show(req);
+            SqlCommand com = new SqlCommand(req, Connexion.getInstance());
+            try
+            {
+                //Exécution de la commande
+                com.ExecuteNonQuery();
+
+                //Libération de la commande
+                com = null;
+                MessageBox.Show("Competence supprimé");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            this.competenceTableAdapter.Fill(this.gestionEmployeDataSet.Competence);
+        }
     }
 }

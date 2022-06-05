@@ -109,6 +109,7 @@
             this.btnDeleteCompetence.Text = "Supprimer competence";
             this.btnDeleteCompetence.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDeleteCompetence.UseVisualStyleBackColor = false;
+            this.btnDeleteCompetence.Click += new System.EventHandler(this.btnDeleteCompetence_Click);
             // 
             // btnNewCompetence
             // 

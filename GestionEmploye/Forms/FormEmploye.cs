@@ -52,7 +52,9 @@ namespace GestionEmploye
 
         private void btnDeleteEmploye_Click(object sender, EventArgs e)
         {
-            string req = "DELETE FROM Employe " +
+            string req = "DELETE FROM EmployeCompetence " +
+                "WHERE idEmploye = " + employeDataGridView.SelectedRows[0].Cells[0].Value;
+            req += "DELETE FROM Employe " +
                          "WHERE id = " + employeDataGridView.SelectedRows[0].Cells[0].Value;
             SqlCommand com = new SqlCommand(req, Connexion.getInstance());
             try
