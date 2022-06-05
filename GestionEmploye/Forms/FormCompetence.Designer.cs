@@ -40,10 +40,15 @@
             this.competenceDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBoxEmploye = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEmployeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.competenceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.competenceDataGridView)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -167,18 +172,53 @@
             this.competenceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.competenceDataGridView.Size = new System.Drawing.Size(872, 435);
             this.competenceDataGridView.TabIndex = 1;
+            this.competenceDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.competenceDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
             this.dataGridViewTextBoxColumn1.HeaderText = "id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "libelle";
             this.dataGridViewTextBoxColumn2.HeaderText = "libelle";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(624, 111);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(248, 435);
+            this.panel2.TabIndex = 2;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listBoxEmploye);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(248, 435);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Employe";
+            // 
+            // listBoxEmploye
+            // 
+            this.listBoxEmploye.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxEmploye.FormattingEnabled = true;
+            this.listBoxEmploye.ItemHeight = 16;
+            this.listBoxEmploye.Location = new System.Drawing.Point(3, 18);
+            this.listBoxEmploye.Name = "listBoxEmploye";
+            this.listBoxEmploye.Size = new System.Drawing.Size(242, 414);
+            this.listBoxEmploye.TabIndex = 0;
             // 
             // FormCompetence
             // 
@@ -186,6 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
             this.ClientSize = new System.Drawing.Size(872, 546);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.competenceDataGridView);
             this.Controls.Add(this.panel1);
             this.Name = "FormCompetence";
@@ -195,6 +236,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gestionEmployeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.competenceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.competenceDataGridView)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -212,5 +255,8 @@
         private System.Windows.Forms.DataGridView competenceDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox listBoxEmploye;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GestionEmploye.Forms;
+using System.Data.SqlClient;
 
 namespace GestionEmploye
 {
@@ -41,6 +42,27 @@ namespace GestionEmploye
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             this.competenceTableAdapter.Fill(this.gestionEmployeDataSet.Competence);
+        }
+
+        private void competenceDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // LISTE EMPLOYE
+            listBoxEmploye.Items.Clear();
+            SqlDataReader dr;
+            string query = "SELECT nom, prenom " +
+                "FROM Employe " +
+                "JOIN EmployeCompetence ON Employe.id = EmployeCompetence.idEmploye " +
+                "WHERE idCompetence = '" + competenceDataGridView.SelectedRows[0].Cells[0].Value + "'";
+            SqlCommand cmd = new SqlCommand(query, Connexion.getInstance());
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                listBoxEmploye.Items.Add(dr["nom"].ToString() + " " + dr["prenom"].ToString());
+            }
+            cmd = null;
+            dr.Close();
+            dr = null;
+            // FIN LISTE EMPLOYE
         }
     }
 }

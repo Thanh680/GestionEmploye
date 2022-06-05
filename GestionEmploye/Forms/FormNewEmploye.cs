@@ -36,10 +36,10 @@ namespace GestionEmploye.Forms
                 dr = null;
             }
             //Requête de type INSERT INTO
-            string req = "INSERT INTO Employe VALUES('" + txtBoxID.Text + "','" + txtBoxNom.Text + "','" + txtBoxPrenom.Text + "')";
+            string req = "INSERT INTO Employe VALUES(" + txtBoxID.Text + ",'" + txtBoxNom.Text + "','" + txtBoxPrenom.Text + "', NULL)";
             foreach (string s in listBoxID.Items)
             {
-                req += "INSERT INTO EmployeCompetence VALUES('" + txtBoxID.Text + "','" + s + "')";
+                req += "INSERT INTO EmployeCompetence VALUES(" + txtBoxID.Text + "," + s + ")";
             }
             SqlCommand com = new SqlCommand(req, Connexion.getInstance());
             try
@@ -51,6 +51,7 @@ namespace GestionEmploye.Forms
                 com = null;
 
                 MessageBox.Show("Employe enregistré");
+                listBoxID.Items.Clear();
             }
             catch (Exception ex)
             {

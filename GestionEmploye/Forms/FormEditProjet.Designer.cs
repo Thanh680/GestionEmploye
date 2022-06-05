@@ -37,6 +37,8 @@
             this.txtBoxDateFin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnValider = new System.Windows.Forms.Button();
+            this.checkedListBoxCompetence = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBoxEmploye = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -105,18 +107,36 @@
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(186, 279);
+            this.btnValider.Location = new System.Drawing.Point(347, 440);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(75, 23);
             this.btnValider.TabIndex = 8;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
             // 
+            // checkedListBoxCompetence
+            // 
+            this.checkedListBoxCompetence.FormattingEnabled = true;
+            this.checkedListBoxCompetence.Location = new System.Drawing.Point(88, 267);
+            this.checkedListBoxCompetence.Name = "checkedListBoxCompetence";
+            this.checkedListBoxCompetence.Size = new System.Drawing.Size(269, 124);
+            this.checkedListBoxCompetence.TabIndex = 10;
+            // 
+            // checkedListBoxEmploye
+            // 
+            this.checkedListBoxEmploye.FormattingEnabled = true;
+            this.checkedListBoxEmploye.Location = new System.Drawing.Point(425, 267);
+            this.checkedListBoxEmploye.Name = "checkedListBoxEmploye";
+            this.checkedListBoxEmploye.Size = new System.Drawing.Size(269, 124);
+            this.checkedListBoxEmploye.TabIndex = 12;
+            // 
             // FormEditProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 358);
+            this.ClientSize = new System.Drawing.Size(809, 573);
+            this.Controls.Add(this.checkedListBoxEmploye);
+            this.Controls.Add(this.checkedListBoxCompetence);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.txtBoxDateFin);
             this.Controls.Add(this.label4);
@@ -128,6 +148,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormEditProjet";
             this.Text = "FormEditProjet";
+            this.Load += new System.EventHandler(this.FormEditProjet_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +165,7 @@
         private System.Windows.Forms.TextBox txtBoxDateFin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.CheckedListBox checkedListBoxCompetence;
+        private System.Windows.Forms.CheckedListBox checkedListBoxEmploye;
     }
 }

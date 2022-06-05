@@ -57,8 +57,8 @@ namespace GestionEmploye.Forms
             }
             //FIN EMPLOYE
 
-                //Requête de type INSERT INTO
-                string req = "INSERT INTO Projet VALUES('" + txtBoxId.Text + "','" + txtBoxLibelle.Text + "','" + txtBoxDateDebut.Text + "','" + txtBoxDateFin.Text + "')";
+            //Requête de type INSERT INTO
+            string req = "INSERT INTO Projet VALUES('" + txtBoxId.Text + "','" + txtBoxLibelle.Text + "','" + dateTimePickerDebut.Text + "','')";
             foreach (string s in listBoxIDC.Items)
             {
                 req += "INSERT INTO ProjetCompetence VALUES('" + txtBoxId.Text + "','" + s + "')";
@@ -112,6 +112,46 @@ namespace GestionEmploye.Forms
                 checkedListBoxEmploye.Items.Add(s);
             }
             // FIN LIST EMPLOYE
+        }
+
+        private void checkedListBoxCompetence_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            checkedListBoxEmploye.Items.Clear();
+            string chkBox = "";
+            foreach (object itemChecked in checkedListBoxCompetence.CheckedItems)
+            {
+                if (chkBox == "")
+                {
+                    chkBox = "'" + itemChecked.ToString() + "'";
+                }
+                else
+                {
+                    chkBox += "," + "'" + itemChecked.ToString() + "'";
+                }
+            }
+            string query = "select DISTINCT nom, prenom " +
+                "from Employe " +
+                "JOIN EmployeCompetence ON Employe.id = EmployeCompetence.idEmploye " +
+                "JOIN Competence ON Competence.id = EmployeCompetence.idCompetence " +
+                "where Competence.libelle in (" + chkBox + ")";
+            SqlCommand cmd = new SqlCommand(query, Connexion.getInstance());
+            SqlDataAdapter sda;
+            DataTable dt = new DataTable();
+            sda = new SqlDataAdapter(cmd);
+            try
+            {
+                sda.Fill(dt);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    string s = dt.Rows[i]["nom"].ToString() + " " + dt.Rows[i]["prenom"].ToString();
+                    checkedListBoxEmploye.Items.Add(s);
+                }
+                cmd = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

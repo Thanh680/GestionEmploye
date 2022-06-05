@@ -29,34 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRefresh = new FontAwesome.Sharp.IconButton();
             this.btnDeleteEmploye = new FontAwesome.Sharp.IconButton();
             this.btnEditEmploye = new FontAwesome.Sharp.IconButton();
             this.btnNewEmploye = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.listBoxCompetence = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.employeDataGridView = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gestionEmployeDataSet = new GestionEmploye.GestionEmployeDataSet();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkedListBoxCompetence = new System.Windows.Forms.CheckedListBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBoxProjet = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBoxCompetence = new System.Windows.Forms.ListBox();
             this.employeTableAdapter = new GestionEmploye.GestionEmployeDataSetTableAdapters.EmployeTableAdapter();
             this.tableAdapterManager = new GestionEmploye.GestionEmployeDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
             this.panelDesktop.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEmployeDataSet)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,7 +78,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(915, 100);
+            this.panel1.Size = new System.Drawing.Size(950, 100);
             this.panel1.TabIndex = 3;
             // 
             // btnRefresh
@@ -86,7 +95,7 @@
             this.btnRefresh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRefresh.IconSize = 30;
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(609, 44);
+            this.btnRefresh.Location = new System.Drawing.Point(644, 44);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(0);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(99, 44);
@@ -110,7 +119,7 @@
             this.btnDeleteEmploye.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeleteEmploye.IconSize = 30;
             this.btnDeleteEmploye.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDeleteEmploye.Location = new System.Drawing.Point(729, 44);
+            this.btnDeleteEmploye.Location = new System.Drawing.Point(764, 44);
             this.btnDeleteEmploye.Margin = new System.Windows.Forms.Padding(0);
             this.btnDeleteEmploye.Name = "btnDeleteEmploye";
             this.btnDeleteEmploye.Rotation = 45D;
@@ -170,92 +179,73 @@
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
+            this.panelDesktop.Controls.Add(this.groupBox4);
+            this.panelDesktop.Controls.Add(this.groupBox3);
             this.panelDesktop.Controls.Add(this.panel2);
-            this.panelDesktop.Controls.Add(this.employeDataGridView);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(0, 100);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(915, 441);
+            this.panelDesktop.Size = new System.Drawing.Size(950, 489);
             this.panelDesktop.TabIndex = 4;
             // 
-            // panel2
+            // groupBox4
             // 
-            this.panel2.Controls.Add(this.listBoxCompetence);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(582, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(333, 441);
-            this.panel2.TabIndex = 1;
-            // 
-            // listBoxCompetence
-            // 
-            this.listBoxCompetence.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listBoxCompetence.FormattingEnabled = true;
-            this.listBoxCompetence.Location = new System.Drawing.Point(0, 13);
-            this.listBoxCompetence.Name = "listBoxCompetence";
-            this.listBoxCompetence.Size = new System.Drawing.Size(333, 212);
-            this.listBoxCompetence.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Compétence";
+            this.groupBox4.Controls.Add(this.employeDataGridView);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Location = new System.Drawing.Point(0, 134);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(617, 426);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
             // 
             // employeDataGridView
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
-            this.employeDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
+            this.employeDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.employeDataGridView.AutoGenerateColumns = false;
             this.employeDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employeDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.employeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nomDataGridViewTextBoxColumn,
             this.prenomDataGridViewTextBoxColumn});
             this.employeDataGridView.DataSource = this.employeBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employeDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employeDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.employeDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeDataGridView.EnableHeadersVisualStyles = false;
             this.employeDataGridView.GridColor = System.Drawing.Color.Gray;
-            this.employeDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.employeDataGridView.Location = new System.Drawing.Point(3, 16);
             this.employeDataGridView.Name = "employeDataGridView";
             this.employeDataGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Olive;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employeDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Olive;
-            this.employeDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Olive;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(19)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Olive;
+            this.employeDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.employeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeDataGridView.Size = new System.Drawing.Size(915, 441);
+            this.employeDataGridView.Size = new System.Drawing.Size(611, 407);
             this.employeDataGridView.TabIndex = 0;
             this.employeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeDataGridView_CellClick);
             // 
@@ -290,6 +280,87 @@
             this.gestionEmployeDataSet.DataSetName = "GestionEmployeDataSet";
             this.gestionEmployeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.checkedListBoxCompetence);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(617, 134);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Rechercher par compétence";
+            // 
+            // checkedListBoxCompetence
+            // 
+            this.checkedListBoxCompetence.CheckOnClick = true;
+            this.checkedListBoxCompetence.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBoxCompetence.FormattingEnabled = true;
+            this.checkedListBoxCompetence.Location = new System.Drawing.Point(3, 18);
+            this.checkedListBoxCompetence.Name = "checkedListBoxCompetence";
+            this.checkedListBoxCompetence.Size = new System.Drawing.Size(611, 113);
+            this.checkedListBoxCompetence.TabIndex = 0;
+            this.checkedListBoxCompetence.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxCompetence_ItemCheck);
+            this.checkedListBoxCompetence.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxCompetence_SelectedIndexChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(617, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(333, 489);
+            this.panel2.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listBoxProjet);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Location = new System.Drawing.Point(0, 181);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(333, 177);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Projet";
+            // 
+            // listBoxProjet
+            // 
+            this.listBoxProjet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxProjet.FormattingEnabled = true;
+            this.listBoxProjet.ItemHeight = 16;
+            this.listBoxProjet.Location = new System.Drawing.Point(3, 18);
+            this.listBoxProjet.Name = "listBoxProjet";
+            this.listBoxProjet.Size = new System.Drawing.Size(327, 156);
+            this.listBoxProjet.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listBoxCompetence);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(333, 181);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Compétences";
+            // 
+            // listBoxCompetence
+            // 
+            this.listBoxCompetence.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxCompetence.FormattingEnabled = true;
+            this.listBoxCompetence.ItemHeight = 16;
+            this.listBoxCompetence.Location = new System.Drawing.Point(3, 18);
+            this.listBoxCompetence.Name = "listBoxCompetence";
+            this.listBoxCompetence.Size = new System.Drawing.Size(327, 160);
+            this.listBoxCompetence.TabIndex = 1;
+            // 
             // employeTableAdapter
             // 
             this.employeTableAdapter.ClearBeforeFill = true;
@@ -308,7 +379,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 541);
+            this.ClientSize = new System.Drawing.Size(950, 589);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panel1);
             this.Name = "FormEmploye";
@@ -316,11 +387,14 @@
             this.Load += new System.EventHandler(this.FormEmploye_Load);
             this.panel1.ResumeLayout(false);
             this.panelDesktop.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.employeDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEmployeDataSet)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -343,6 +417,11 @@
         private FontAwesome.Sharp.IconButton btnRefresh;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ListBox listBoxCompetence;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListBox listBoxProjet;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckedListBox checkedListBoxCompetence;
     }
 }

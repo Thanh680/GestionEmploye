@@ -91,17 +91,17 @@ namespace GestionEmploye
             // LISTE EMPLOYE
             listBoxEmploye.Items.Clear();
             SqlDataReader dr2;
-            string query = "SELECT nom, prenom " +
+            string query2 = "SELECT nom, prenom " +
                 "FROM Projet " +
                 "JOIN Employe ON Projet.id = Employe.idProjet " +
                 "WHERE idProjet = '" + projetDataGridView.SelectedRows[0].Cells[0].Value + "'";
-            SqlCommand cmd2 = new SqlCommand(query, Connexion.getInstance());
+            SqlCommand cmd2 = new SqlCommand(query2, Connexion.getInstance());
             dr2 = cmd2.ExecuteReader();
             while (dr2.Read())
             {
                 listBoxEmploye.Items.Add(dr2["nom"].ToString() + " " + dr2["prenom"].ToString());
             }
-            cmd = null;
+            cmd2 = null;
             dr2.Close();
             dr2 = null;
             // FIN LISTE EMPLOYE

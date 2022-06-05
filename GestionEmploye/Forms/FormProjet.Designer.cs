@@ -35,6 +35,11 @@
             this.btnDeleteProjet = new FontAwesome.Sharp.IconButton();
             this.btnEditProjet = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBoxEmploye = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBoxCompetence = new System.Windows.Forms.ListBox();
             this.projetDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,15 +49,14 @@
             this.gestionEmployeDataSet = new GestionEmploye.GestionEmployeDataSet();
             this.projetTableAdapter = new GestionEmploye.GestionEmployeDataSetTableAdapters.ProjetTableAdapter();
             this.tableAdapterManager = new GestionEmploye.GestionEmployeDataSetTableAdapters.TableAdapterManager();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.listBoxCompetence = new System.Windows.Forms.ListBox();
-            this.listBoxEmploye = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.projetDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEmployeDataSet)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNewProjet
@@ -172,6 +176,62 @@
             this.panel2.Size = new System.Drawing.Size(948, 514);
             this.panel2.TabIndex = 3;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.groupBox2);
+            this.panel3.Controls.Add(this.groupBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(649, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(299, 514);
+            this.panel3.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listBoxEmploye);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Location = new System.Drawing.Point(0, 198);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(299, 177);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Employe";
+            // 
+            // listBoxEmploye
+            // 
+            this.listBoxEmploye.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxEmploye.FormattingEnabled = true;
+            this.listBoxEmploye.ItemHeight = 16;
+            this.listBoxEmploye.Location = new System.Drawing.Point(3, 18);
+            this.listBoxEmploye.Name = "listBoxEmploye";
+            this.listBoxEmploye.Size = new System.Drawing.Size(293, 156);
+            this.listBoxEmploye.TabIndex = 1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listBoxCompetence);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(299, 198);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Compétences attendues";
+            // 
+            // listBoxCompetence
+            // 
+            this.listBoxCompetence.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxCompetence.FormattingEnabled = true;
+            this.listBoxCompetence.ItemHeight = 16;
+            this.listBoxCompetence.Location = new System.Drawing.Point(3, 18);
+            this.listBoxCompetence.Name = "listBoxCompetence";
+            this.listBoxCompetence.Size = new System.Drawing.Size(293, 177);
+            this.listBoxCompetence.TabIndex = 0;
+            // 
             // projetDataGridView
             // 
             this.projetDataGridView.AutoGenerateColumns = false;
@@ -243,34 +303,6 @@
             this.tableAdapterManager.ProjetTableAdapter = this.projetTableAdapter;
             this.tableAdapterManager.UpdateOrder = GestionEmploye.GestionEmployeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.listBoxEmploye);
-            this.panel3.Controls.Add(this.listBoxCompetence);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(649, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(299, 514);
-            this.panel3.TabIndex = 1;
-            // 
-            // listBoxCompetence
-            // 
-            this.listBoxCompetence.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listBoxCompetence.FormattingEnabled = true;
-            this.listBoxCompetence.Location = new System.Drawing.Point(0, 0);
-            this.listBoxCompetence.Name = "listBoxCompetence";
-            this.listBoxCompetence.Size = new System.Drawing.Size(299, 160);
-            this.listBoxCompetence.TabIndex = 0;
-            // 
-            // listBoxEmploye
-            // 
-            this.listBoxEmploye.Dock = System.Windows.Forms.DockStyle.Top;
-            this.listBoxEmploye.FormattingEnabled = true;
-            this.listBoxEmploye.Location = new System.Drawing.Point(0, 160);
-            this.listBoxEmploye.Name = "listBoxEmploye";
-            this.listBoxEmploye.Size = new System.Drawing.Size(299, 173);
-            this.listBoxEmploye.TabIndex = 1;
-            // 
             // FormProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,10 +316,12 @@
             this.Load += new System.EventHandler(this.FormProjet_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.projetDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionEmployeDataSet)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -312,5 +346,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ListBox listBoxEmploye;
         private System.Windows.Forms.ListBox listBoxCompetence;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

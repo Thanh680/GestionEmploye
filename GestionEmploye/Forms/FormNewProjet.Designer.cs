@@ -33,14 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxLibelle = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBoxDateDebut = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBoxDateFin = new System.Windows.Forms.TextBox();
             this.btnValider = new System.Windows.Forms.Button();
             this.checkedListBoxCompetence = new System.Windows.Forms.CheckedListBox();
             this.listBoxIDC = new System.Windows.Forms.ListBox();
             this.checkedListBoxEmploye = new System.Windows.Forms.CheckedListBox();
             this.listBoxIDE = new System.Windows.Forms.ListBox();
+            this.dateTimePickerDebut = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // txtBoxId
@@ -78,34 +76,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(91, 139);
+            this.label3.Location = new System.Drawing.Point(86, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "datedebut";
-            // 
-            // txtBoxDateDebut
-            // 
-            this.txtBoxDateDebut.Location = new System.Drawing.Point(159, 136);
-            this.txtBoxDateDebut.Name = "txtBoxDateDebut";
-            this.txtBoxDateDebut.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDateDebut.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(107, 186);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "datefin";
-            // 
-            // txtBoxDateFin
-            // 
-            this.txtBoxDateFin.Location = new System.Drawing.Point(159, 183);
-            this.txtBoxDateFin.Name = "txtBoxDateFin";
-            this.txtBoxDateFin.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxDateFin.TabIndex = 6;
+            this.label3.Text = "dateCreation";
             // 
             // btnValider
             // 
@@ -119,23 +94,26 @@
             // 
             // checkedListBoxCompetence
             // 
+            this.checkedListBoxCompetence.CheckOnClick = true;
             this.checkedListBoxCompetence.FormattingEnabled = true;
             this.checkedListBoxCompetence.Location = new System.Drawing.Point(80, 222);
             this.checkedListBoxCompetence.Name = "checkedListBoxCompetence";
             this.checkedListBoxCompetence.Size = new System.Drawing.Size(269, 124);
             this.checkedListBoxCompetence.TabIndex = 9;
+            this.checkedListBoxCompetence.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBoxCompetence_ItemCheck);
             // 
             // listBoxIDC
             // 
             this.listBoxIDC.FormattingEnabled = true;
-            this.listBoxIDC.Location = new System.Drawing.Point(308, 100);
+            this.listBoxIDC.Location = new System.Drawing.Point(328, 46);
             this.listBoxIDC.Name = "listBoxIDC";
-            this.listBoxIDC.Size = new System.Drawing.Size(96, 56);
+            this.listBoxIDC.Size = new System.Drawing.Size(31, 4);
             this.listBoxIDC.TabIndex = 10;
             this.listBoxIDC.Visible = false;
             // 
             // checkedListBoxEmploye
             // 
+            this.checkedListBoxEmploye.CheckOnClick = true;
             this.checkedListBoxEmploye.FormattingEnabled = true;
             this.checkedListBoxEmploye.Location = new System.Drawing.Point(399, 222);
             this.checkedListBoxEmploye.Name = "checkedListBoxEmploye";
@@ -145,25 +123,32 @@
             // listBoxIDE
             // 
             this.listBoxIDE.FormattingEnabled = true;
-            this.listBoxIDE.Location = new System.Drawing.Point(446, 100);
+            this.listBoxIDE.Location = new System.Drawing.Point(378, 46);
             this.listBoxIDE.Name = "listBoxIDE";
-            this.listBoxIDE.Size = new System.Drawing.Size(96, 56);
+            this.listBoxIDE.Size = new System.Drawing.Size(32, 4);
             this.listBoxIDE.TabIndex = 12;
+            this.listBoxIDE.Visible = false;
+            // 
+            // dateTimePickerDebut
+            // 
+            this.dateTimePickerDebut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDebut.Location = new System.Drawing.Point(159, 139);
+            this.dateTimePickerDebut.Name = "dateTimePickerDebut";
+            this.dateTimePickerDebut.Size = new System.Drawing.Size(86, 20);
+            this.dateTimePickerDebut.TabIndex = 13;
             // 
             // FormNewProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 461);
+            this.Controls.Add(this.dateTimePickerDebut);
             this.Controls.Add(this.listBoxIDE);
             this.Controls.Add(this.checkedListBoxEmploye);
             this.Controls.Add(this.listBoxIDC);
             this.Controls.Add(this.checkedListBoxCompetence);
             this.Controls.Add(this.btnValider);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtBoxDateFin);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtBoxDateDebut);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBoxLibelle);
             this.Controls.Add(this.label1);
@@ -183,13 +168,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxLibelle;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtBoxDateDebut;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtBoxDateFin;
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.CheckedListBox checkedListBoxCompetence;
         private System.Windows.Forms.ListBox listBoxIDC;
         private System.Windows.Forms.CheckedListBox checkedListBoxEmploye;
         private System.Windows.Forms.ListBox listBoxIDE;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDebut;
     }
 }
