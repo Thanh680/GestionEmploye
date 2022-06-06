@@ -75,7 +75,8 @@ namespace GestionEmploye
 
         private void btnEditEmploye_Click(object sender, EventArgs e)
         {
-
+            FormEditEmploye fee = new FormEditEmploye();
+            fee.ShowDialog();
         }
 
         private void employeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)

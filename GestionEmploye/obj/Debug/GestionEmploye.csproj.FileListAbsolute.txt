@@ -2,7 +2,6 @@ D:\GestionEmploye\GestionEmploye\GestionEmploye\bin\Debug\GestionEmploye.exe.con
 D:\GestionEmploye\GestionEmploye\GestionEmploye\bin\Debug\GestionEmploye.exe
 D:\GestionEmploye\GestionEmploye\GestionEmploye\bin\Debug\GestionEmploye.pdb
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.AssemblyReference.cache
-D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.SuggestedBindingRedirects.cache
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Properties.Resources.resources
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.GenerateResource.cache
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.CoreCompileInputs.cache
@@ -18,3 +17,5 @@ D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Forms.F
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Forms.FormEditProjet.resources
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.FormCompetence.resources
 D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Forms.FormNewCompetence.resources
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.csproj.SuggestedBindingRedirects.cache
+D:\GestionEmploye\GestionEmploye\GestionEmploye\obj\Debug\GestionEmploye.Forms.FormEditEmploye.resources

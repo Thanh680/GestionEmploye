@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBoxId = new System.Windows.Forms.TextBox();
             this.txtBoxLibelle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxdateDebut = new System.Windows.Forms.TextBox();
@@ -39,6 +38,9 @@
             this.btnValider = new System.Windows.Forms.Button();
             this.checkedListBoxCompetence = new System.Windows.Forms.CheckedListBox();
             this.checkedListBoxEmploye = new System.Windows.Forms.CheckedListBox();
+            this.comboBoxId = new System.Windows.Forms.ComboBox();
+            this.listBoxIDC = new System.Windows.Forms.ListBox();
+            this.listBoxIDE = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -49,13 +51,6 @@
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
-            // 
-            // txtBoxId
-            // 
-            this.txtBoxId.Location = new System.Drawing.Point(177, 78);
-            this.txtBoxId.Name = "txtBoxId";
-            this.txtBoxId.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxId.TabIndex = 1;
             // 
             // txtBoxLibelle
             // 
@@ -113,6 +108,7 @@
             this.btnValider.TabIndex = 8;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // checkedListBoxCompetence
             // 
@@ -121,6 +117,7 @@
             this.checkedListBoxCompetence.Name = "checkedListBoxCompetence";
             this.checkedListBoxCompetence.Size = new System.Drawing.Size(269, 124);
             this.checkedListBoxCompetence.TabIndex = 10;
+            this.checkedListBoxCompetence.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxCompetence_SelectedIndexChanged);
             // 
             // checkedListBoxEmploye
             // 
@@ -130,11 +127,41 @@
             this.checkedListBoxEmploye.Size = new System.Drawing.Size(269, 124);
             this.checkedListBoxEmploye.TabIndex = 12;
             // 
+            // comboBoxId
+            // 
+            this.comboBoxId.FormattingEnabled = true;
+            this.comboBoxId.Location = new System.Drawing.Point(177, 78);
+            this.comboBoxId.Name = "comboBoxId";
+            this.comboBoxId.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxId.TabIndex = 13;
+            this.comboBoxId.SelectedIndexChanged += new System.EventHandler(this.comboBoxId_SelectedIndexChanged);
+            // 
+            // listBoxIDC
+            // 
+            this.listBoxIDC.FormattingEnabled = true;
+            this.listBoxIDC.Location = new System.Drawing.Point(377, 87);
+            this.listBoxIDC.Name = "listBoxIDC";
+            this.listBoxIDC.Size = new System.Drawing.Size(31, 4);
+            this.listBoxIDC.TabIndex = 14;
+            this.listBoxIDC.Visible = false;
+            // 
+            // listBoxIDE
+            // 
+            this.listBoxIDE.FormattingEnabled = true;
+            this.listBoxIDE.Location = new System.Drawing.Point(425, 87);
+            this.listBoxIDE.Name = "listBoxIDE";
+            this.listBoxIDE.Size = new System.Drawing.Size(32, 4);
+            this.listBoxIDE.TabIndex = 15;
+            this.listBoxIDE.Visible = false;
+            // 
             // FormEditProjet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 573);
+            this.Controls.Add(this.listBoxIDE);
+            this.Controls.Add(this.listBoxIDC);
+            this.Controls.Add(this.comboBoxId);
             this.Controls.Add(this.checkedListBoxEmploye);
             this.Controls.Add(this.checkedListBoxCompetence);
             this.Controls.Add(this.btnValider);
@@ -144,7 +171,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtBoxLibelle);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBoxId);
             this.Controls.Add(this.label1);
             this.Name = "FormEditProjet";
             this.Text = "FormEditProjet";
@@ -157,7 +183,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBoxId;
         private System.Windows.Forms.TextBox txtBoxLibelle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxdateDebut;
@@ -167,5 +192,8 @@
         private System.Windows.Forms.Button btnValider;
         private System.Windows.Forms.CheckedListBox checkedListBoxCompetence;
         private System.Windows.Forms.CheckedListBox checkedListBoxEmploye;
+        private System.Windows.Forms.ComboBox comboBoxId;
+        private System.Windows.Forms.ListBox listBoxIDC;
+        private System.Windows.Forms.ListBox listBoxIDE;
     }
 }

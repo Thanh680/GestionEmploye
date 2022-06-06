@@ -66,6 +66,12 @@
     <Compile Include="Forms\FormCompetence.Designer.cs">
       <DependentUpon>FormCompetence.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormEditEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditEmploye.Designer.cs">
+      <DependentUpon>FormEditEmploye.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormEditProjet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCompetence.resx">
       <DependentUpon>FormCompetence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditEmploye.resx">
+      <DependentUpon>FormEditEmploye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormEditProjet.resx">
       <DependentUpon>FormEditProjet.cs</DependentUpon>
